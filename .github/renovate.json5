@@ -1,4 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["local>letsmod/renovate-config"],
+  extends: ["config:recommended", "schedule:weekends"],
+  labels: ["dependencies"],
+  semanticCommits: "enabled",
 }
