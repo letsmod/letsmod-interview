@@ -4,7 +4,7 @@
     "dev": "cross-env NODE_ENV=development vite --mode local-development"
   },
   "dependencies": {
-    "@types/three": "^0.181.0",
+    "@types/three": "^0.182.0",
     "cors": "^2.8.5",
     "cross-env": "^10.0.0",
     "express": "^5.0.0",
