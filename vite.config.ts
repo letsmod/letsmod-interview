@@ -2,7 +2,6 @@ import path from "path";
 import { defineConfig, loadEnv } from "vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import { VitePWA } from "vite-plugin-pwa";
-import { splitVendorChunkPlugin } from "vite";
 import { workbox } from "./tools/vite/workbox";
 import fs from "fs";
 
@@ -36,7 +35,6 @@ export default defineConfig(({ mode, ...rest }) => {
     },
     plugins: [
       // htmlPlugin(mode),
-      splitVendorChunkPlugin(),
       viteStaticCopy({
         targets: [
           // {
