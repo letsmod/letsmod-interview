@@ -44,6 +44,28 @@ jobs:
           header: pr-title-check-error
           delete: true
 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
   super-linter:
     name: Super-Linter
     if: github.actor != 'renovate[bot]' # skip for Renovate PRs

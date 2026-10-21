@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "postinstall": "node ./node_modules/esbuild/install.js",
-    "dev": "cross-env NODE_ENV=development vite --mode local-development"
+    "dev": "cross-env NODE_ENV=development vite --mode local-development",
+    "build": "vite build"
   },
   "dependencies": {
     "@types/three": "^0.182.0",
